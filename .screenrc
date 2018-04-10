@@ -1,0 +1,33 @@
+autodetach on
+startup_message off
+
+term screen-256color
+#defencoding utf8
+#encoding utf8 utf8
+
+#caption always "%{= wb} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wk} [%l] %{=b wb}%y/%m/%d(%D) %{=b wm}%c"
+#caption always "%{=r dd}%-Lw%40L>%?%F%{=b dR}%:[%? %n%f %t %?%F%{-}%:]%?%+Lw %?%F%-024=GNU Screen of Git master%:%=%?"
+caption always "%{=r dd} %-w%{=b dd} %n %t %{-}%+w %="
+
+# Keys
+escape ^Tt
+
+bind -c REGION 2 split
+bind -c REGION 1 only
+bind -c REGION 0 remove
+bind o focus
+bind -c REGION \^ resize
+bind x command -c REGION
+bind w title
+bind s deflog on
+
+setenv LANG ja_JP.UTF-8
+
+# log
+logfile "$HOME/tmp/screen-%Y%m%d-%n.log"
+
+# scroll
+defscrollback 10000
+defencoding utf8
+cjkwidth on
+

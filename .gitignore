@@ -1,0 +1,21 @@
+.buildpath
+.project
+.settings
+
+# IntelliJ IDEA
+.idea
+*.iml
+projectFilesBackup
+ 
+# sbt project
+logs
+target
+tmp
+
+
+# ansible work
+test.yml
+/roles/test_role/
+/test_roles
+group_vars/local
+hosts/local
